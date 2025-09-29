@@ -1,0 +1,13 @@
+/* /styles/globals.css or /static/style.css */
+
+/* Progress bar */
+#nprogress .bar {
+  background: red !important;   /* bar color */
+  height: 10px !important;      /* thickness */
+}
+
+/* Optional: spinner color */
+#nprogress .spinner-icon {
+  border-top-color: red !important;
+  border-left-color: red !important;
+}

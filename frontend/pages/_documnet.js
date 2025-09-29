@@ -9,7 +9,8 @@ export default function Document() {
         <meta charSet="UTF-8" />
         <meta name="description" content="My Next.js App" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Bootstrap CSS CDN */}
+
+        {/* Bootstrap CSS */}
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -17,7 +18,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        {/* Google Fonts example */}
+        {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
@@ -25,10 +26,14 @@ export default function Document() {
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Custom global CSS */}
+        <link rel="stylesheet" href="/styles/style.css" />
       </Head>
       <body>
         <Main />
         <NextScript />
+
         {/* Bootstrap JS + Popper */}
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

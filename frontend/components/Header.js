@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { APP_NAME } from "../config";
 import { signout, isAuth } from "../actions/auth";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 import {
   Collapse,
@@ -14,6 +16,13 @@ import {
   NavLink,
   NavbarText,
 } from "reactstrap";
+
+// Start progress bar on route change
+Router.events.on("routeChangeStart", () => NProgress.start());
+
+// Stop progress bar when done or error
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
